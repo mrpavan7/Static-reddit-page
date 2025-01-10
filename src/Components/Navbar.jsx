@@ -6,6 +6,7 @@ import { FaArrowUpWideShort } from "react-icons/fa6";
 import { MdOutlineMarkChatUnread, MdOutlineMailOutline } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import { LuSearch } from "react-icons/lu";
+import ProfileImg from "../assets/ProfileImg.jpg";
 
 const Navbar = () => {
   return (
@@ -43,7 +44,9 @@ const Navbar = () => {
         <MdOutlineMarkChatUnread className="text-2xl text-gray-600" />
         <MdOutlineMailOutline className="text-2xl text-gray-600" />
         <div className="flex items-center gap-2 ">
-          <div className="bg-[#ff4500] h-10 aspect-square rounded-full"></div>
+          <div className="bg-[#ff4500] h-10 aspect-square rounded-full">
+            <img src={ProfileImg} alt="" className="rounded-full" />
+          </div>
           <IoIosArrowDown className="text-2xl text-gray-600" />
         </div>
       </div>
