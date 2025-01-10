@@ -5,7 +5,7 @@ import Banners from "./Banners";
 
 const MainPage = () => {
   return (
-    <div className="rounded-lg w-full bg-blue-50 flex">
+    <div className="rounded-lg h-[130vh] w-full bg-blue-50 flex">
       <Categories />
       <Popular />
       <Banners />
