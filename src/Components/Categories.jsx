@@ -89,7 +89,7 @@ const Categories = () => {
   ];
 
   return (
-    <div className=" h-full w-[20%] px-5 pt-5">
+    <div className=" w-[20%] px-5 mt-5">
       <div className="flex items-center justify-between p-2 rounded-lg cursor-pointer bg-white border w-[95%]">
         <p className="font-medium text-gray-500">Filter by</p>
         <IoIosArrowDown className="text-xl text-gray-500" />

@@ -32,7 +32,7 @@ const Navbar = () => {
           <LuSearch className="text-xl text-gray-500 cursor-pointer" />
           <input
             type="text"
-            className="text-base font-semibold bg-gray-100 focus:outline-none"
+            className="text-base font-semibold w-full bg-gray-100 focus:outline-none"
             placeholder="Find comunity or post"
           />
         </div>

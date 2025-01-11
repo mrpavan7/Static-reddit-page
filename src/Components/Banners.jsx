@@ -4,7 +4,7 @@ import RedditCard from "./RedditCard";
 
 const Banners = () => {
   return (
-    <div className=" h-full  w-[20%] pt-5 px-5">
+    <div className=" w-[20%] mt-5 px-5">
       <SummerSaleCard />
       <RedditCard />
     </div>
