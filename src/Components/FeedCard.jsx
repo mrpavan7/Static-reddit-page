@@ -17,13 +17,15 @@ const FeedCard = ({ post }) => {
   return (
     <div className="w-full h-[21vh] border flex rounded-lg mt-5">
       <div className="w-[92%] p-3 flex gap-5">
-        <div className="h-full bg-red-300 border rounded-md aspect-square">
-          <img
-            src={post.thumbnail ? post.thumbnail : defaultThumbnail}
-            alt=""
-            className="w-full h-full rounded-md"
-            onError={handleThumbnailError}
-          />
+        <div className="h-full bg-gray-400 border rounded-md aspect-square">
+          <a href={post.shareUrl}>
+            <img
+              src={post.thumbnail ? post.thumbnail : defaultThumbnail}
+              alt=""
+              className="w-full h-full rounded-md"
+              onError={handleThumbnailError}
+            />
+          </a>
         </div>
         <div className="h-full w-[60%] px-3 flex flex-col justify-between">
           <p className="text-lg font-semibold cursor-pointer">{post.title}</p>

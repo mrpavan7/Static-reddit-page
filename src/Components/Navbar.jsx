@@ -43,9 +43,13 @@ const Navbar = () => {
     try {
       checkRateLimit();
       const response = await axios.get(
-        `https://www.reddit.com/search.json?q=${encodeURIComponent(
-          query
-        )}&limit=5`
+        `${import.meta.env.VITE_REDDIT_API_BASE_URL}/search.json`,
+        {
+          params: {
+            q: query,
+            limit: 5,
+          },
+        }
       );
 
       // Update rate limit info from headers
