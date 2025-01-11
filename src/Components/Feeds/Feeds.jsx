@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import FeedCard from "./FeedCard";
-import "../App.css";
+import "../../App.css";
 import axios from "axios";
 import SkeletonCard from "./SkeletonCard";
 
@@ -18,6 +18,7 @@ const Feeds = () => {
   const filters = ["Hot", "New", "Controversial", "Rising", "Top"];
   const baseUrl = import.meta.env.VITE_REDDIT_API_BASE_URL;
 
+  // Formatting date and time
   const formatRedditDate = (utcSeconds) => {
     const date = new Date(utcSeconds * 1000);
 
@@ -31,10 +32,12 @@ const Feeds = () => {
     }).format(date);
   };
 
+  // The Reddit API does not provide the number of shares for a post, so a random number is used instead.
   const generateRandomShareNumber = () => {
     return Math.floor(Math.random() * 900) + 100;
   };
 
+  // Fetch profile image for the user
   const fetchProfileImage = async (author) => {
     try {
       const response = await axios.get(`${baseUrl}/user/${author}/about.json`);
@@ -44,6 +47,7 @@ const Feeds = () => {
     }
   };
 
+  // Formatting large numbers to make them short
   const formatNumber = (num) => {
     if (num >= 1000000) {
       return (num / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
@@ -54,6 +58,7 @@ const Feeds = () => {
     return num.toString();
   };
 
+  // Checking API rate limit
   const checkRateLimit = () => {
     const now = Date.now();
     if (now - lastRequestTime < 1000) {
@@ -65,6 +70,7 @@ const Feeds = () => {
     setLastRequestTime(now);
   };
 
+  // Fetch feeds from Reddit API based on filter, subreddit and limit
   const fetchFeeds = async (
     subredditName,
     activeFilter,
@@ -141,6 +147,7 @@ const Feeds = () => {
     }
   };
 
+  // Load more posts when user scrolls to the bottom
   const loadMore = useCallback(() => {
     if (!isLoadingMore && after) {
       fetchFeeds(subredditName, activeFilter, limit, after);
@@ -169,11 +176,10 @@ const Feeds = () => {
     fetchFeeds(subredditName, activeFilter, limit);
   }, [subredditName, activeFilter]);
 
+  // Handle filter change
   const handleFilter = (filter) => {
     setActiveFilter(filter);
   };
-
-  console.log(posts);
 
   return (
     <div className="bg-white rounded-lg px-5 w-[60%] mt-5">

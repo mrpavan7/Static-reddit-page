@@ -21,7 +21,7 @@ database-debug.log
 ui-debug.log
 
 # Environment files
-.env
+.env*
 .env.local
 .env.development.local
 .env.test.local

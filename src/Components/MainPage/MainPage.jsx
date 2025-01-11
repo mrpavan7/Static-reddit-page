@@ -1,7 +1,7 @@
 import React from "react";
-import Categories from "./Categories";
-import Feeds from "./Feeds";
-import Banners from "./Banners";
+import Categories from "../Categories/Categories";
+import Feeds from "../Feeds/Feeds";
+import Banners from "../Banners/Banners";
 
 const MainPage = () => {
   return (

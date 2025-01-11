@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import { LuSun } from "react-icons/lu";
-import RedditLogo from "../assets/RedditLogo.svg";
+import RedditLogo from "../../assets/RedditLogo.svg";
 import { HiOutlineHome, HiOutlineTrendingUp } from "react-icons/hi";
 import { FaArrowUpWideShort } from "react-icons/fa6";
 import { MdOutlineMarkChatUnread, MdOutlineMailOutline } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import { LuSearch } from "react-icons/lu";
-import ProfileImg from "../assets/ProfileImg.jpg";
+import ProfileImg from "../../assets/ProfileImg.jpg";
 import axios from "axios";
-import "../App.css";
+import "../../App.css";
 
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -21,6 +21,7 @@ const Navbar = () => {
   const [clicking, setClicking] = useState(false);
   const searchRef = useRef(null);
 
+  //checks api rate limit
   const checkRateLimit = () => {
     const now = Date.now();
     if (now - lastSearchTime < 1000) {
@@ -33,6 +34,7 @@ const Navbar = () => {
     setLastSearchTime(now);
   };
 
+  //handle search input and triggers api call
   const handleSearch = async (query) => {
     if (!query.trim()) {
       setSearchResults([]);
@@ -67,6 +69,7 @@ const Navbar = () => {
     }
   };
 
+  //call handleSearch with a small delay
   useEffect(() => {
     const timer = setTimeout(() => {
       handleSearch(searchQuery);
@@ -75,6 +78,7 @@ const Navbar = () => {
     return () => clearTimeout(timer);
   }, [searchQuery]);
 
+  //close the dropdown when clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {

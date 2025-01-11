@@ -1,7 +1,7 @@
 import React from "react";
 import SummerSaleCard from "./SummerSaleCard";
 import RedditCard from "./RedditCard";
-import Footer from "./Footer";
+import Footer from "../Footer/Footer";
 
 const Banners = () => {
   return (

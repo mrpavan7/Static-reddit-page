@@ -1,5 +1,5 @@
 import React from "react";
-import RedditLogo from "../assets/RedditLogo.svg";
+import RedditLogo from "../../assets/RedditLogo.svg";
 
 const RedditCard = () => {
   return (

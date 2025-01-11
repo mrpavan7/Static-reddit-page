@@ -1,5 +1,5 @@
 import React from "react";
-import defaultImg from "../assets/defaultImg.png";
+import defaultImg from "../../assets/defaultImg.png";
 
 const Section = ({ category }) => {
   return (

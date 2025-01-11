@@ -3,8 +3,8 @@ import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { FiMessageSquare } from "react-icons/fi";
 import { GoShareAndroid } from "react-icons/go";
 import { MdOutlineMoreHoriz } from "react-icons/md";
-import defaultImage from "../assets/defaultImg.png";
-import defaultThumbnail from "../assets/defaultThumbnail.jpg";
+import defaultImage from "../../assets/defaultImg.png";
+import defaultThumbnail from "../../assets/defaultThumbnail.jpg";
 
 const FeedCard = ({ post }) => {
   const handleProfileImageError = (e) => {
