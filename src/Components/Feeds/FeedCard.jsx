@@ -21,7 +21,7 @@ const FeedCard = ({ post }) => {
           <a href={post.shareUrl}>
             <img
               src={post.thumbnail ? post.thumbnail : defaultThumbnail}
-              alt=""
+              alt="Thumbnail"
               className="w-full h-full rounded-md"
               onError={handleThumbnailError}
             />
@@ -35,7 +35,7 @@ const FeedCard = ({ post }) => {
               <img
                 src={post.profileImage ? post.profileImage : defaultImage}
                 className="h-5 rounded-full cursor-pointer aspect-square"
-                alt=""
+                alt="Profile Image"
                 onError={handleProfileImageError}
               />
               <p>{post.author}</p>

@@ -6,12 +6,12 @@ const SummerSaleCard = () => {
     <div className="relative flex items-center justify-center w-full overflow-hidden bg-white rounded-lg h-72">
       <img
         src={flower}
-        alt=""
+        alt="Floral background"
         className="h-[65%] opacity-85 absolute top-0 rotate-90 left-0"
       />
       <img
         src={flower}
-        alt=""
+        alt="Floral background"
         className="h-[65%] absolute bottom-0 -rotate-90 right-0"
       />
       <p className="absolute text-lg font-semibold top-5">SUMMER BIG</p>

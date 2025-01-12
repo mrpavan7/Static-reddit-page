@@ -94,7 +94,7 @@ const Navbar = () => {
     <div className="flex items-center justify-between w-full px-5 mt-3 bg-white h-14">
       <div className="flex items-center h-full gap-3">
         <LuSun className="text-2xl cursor-pointer" />
-        <img src={RedditLogo} alt="" className="w-auto h-20" />
+        <img src={RedditLogo} alt="Reddit Logo" className="w-auto h-20" />
       </div>
       <div className="flex items-center gap-10">
         <div
@@ -202,7 +202,11 @@ const Navbar = () => {
         <MdOutlineMailOutline className="text-2xl text-gray-600" />
         <div className="flex items-center gap-2 ">
           <div className="bg-[#ff4500] h-10 aspect-square rounded-full">
-            <img src={ProfileImg} alt="" className="rounded-full" />
+            <img
+              src={ProfileImg}
+              alt="Profile Image"
+              className="rounded-full"
+            />
           </div>
           <IoIosArrowDown className="text-2xl text-gray-600" />
         </div>

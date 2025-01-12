@@ -7,7 +7,7 @@ const Section = ({ category }) => {
       <div className="flex gap-4">
         <img
           src={category.img ? category.img : defaultImg}
-          alt=""
+          alt="Thumbnail"
           className="h-8 rounded-full aspect-square"
         />
         <p className="font-semibold text-gray-600">{category.name}</p>

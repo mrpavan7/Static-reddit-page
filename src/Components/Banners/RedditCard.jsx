@@ -16,7 +16,7 @@ const RedditCard = () => {
         <div className="w-2 h-2 bg-gray-200 rounded-full"></div>
         <div className="w-2 h-2 bg-gray-200 rounded-full"></div>
       </div>
-      <img src={RedditLogo} alt="" className="w-[60%] mt-5" />
+      <img src={RedditLogo} alt="Reddit Logo" className="w-[60%] mt-5" />
       <p className="relative text-lg font-semibold text-gray-700 bottom-5">
         Advertise on Reddit
       </p>
